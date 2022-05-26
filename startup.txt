@@ -1,0 +1,93 @@
+*title Scrubs and Scalpels ChoiceScript Game
+*author Aurora Robinson
+*scene_list
+  startup
+  animal
+  variables
+  gosub
+  ending
+  death
+
+*create leadership 50
+*create strength 50
+
+Welcome to my ChoiceScript Game, this is my first attempt at making a game for others!
+
+Copyright 2010 by Dan Fabulich.
+
+*link http://www.choiceofgames.com/LICENSE-1.0.txt
+
+See the License for the specific language governing
+permissions and limitations under the License.
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.
+
+*page_break
+
+The overhead lights in the surgical room highlight the gruesome wound on the patient's abdomen.
+She suffered a traumatic avulsion from an unidentified animal and was brought in at 04:12 AM.
+Several lacerations can be seen surrounding the main wound and will require stitches.
+
+But, first, we need to clarify who you are before the operation begins. 
+
+*choice
+  #I am the patient.
+    Earlier today, you were having the worst day of your life. Your partner broke
+    up with you, your family couldn't be bothered, and the check you cashed from
+    your new job bounced! So, you went for a hike and fell victim to a wild 
+    animal attack. Do you remember anything from your hike?
+    *choice
+      #I didn't notice anything, I was on my phone, and I can't remember what happened.
+        Unfortunately, you didn't research the basic tenets of survival. Your
+        family had a right to be unimpressed with you. As your spirit watches
+        on in horror, the medical student's jittering hand causes air to enter
+        your IV. You suffer from an air embolism and fade into the light.
+        *finish
+      #I noticed the birds had stopped singing... but everything else is blurry.
+	  Unfortunately, you didn't act on your gut instinct and run for the
+	  hills. As your spirit watches on in horror, the medical student's 
+	  jittering hand causes air to enter your IV. You suffer from an air 
+	  embolism and fade into the light.
+        *finish
+      #I was fully aware there was a cougar nearby, and I turned around to face
+	it. However, I couldn't get my bear spray out of my backpack quick enough.
+        Unfortunately, you didn't go with a hiking partner and now you are
+	  at the mercy of an underpaid, overworked medical team. As your spirit 
+	  watches on in horror, the medical student's jittering hand causes air 
+	  to enter your IV. You suffer from an air embolism and fade into the light.
+        *finish
+  #I am the anethesiologist. 
+    You are bored. Life has been dragging on lately, but you notice the attending
+    physician looks new. You wonder if they are paying enough attention to the 
+    medical student. Sighing, you...
+    *choice
+      #Crack a joke at the medical student's expense.
+        They blink. This is obviously not the best time to offer sarcasm.
+	  Eventually, the medical student is offered a chance at helping the nurse.
+	  Something goes wrong! The patient is coding, nurses from other rooms rush
+	  in to assist but there is nothing that can be done.
+        *finish
+      #Return to listening to your audiobook and monitoring your equipment. After all,
+	it isn't your job to babysit someone else's medical student.
+        You listen to your favorite author, what genre are you listening to?
+		#Medical studies, nothing is more important than being good at your job.
+		  *set leadership +10
+		  Of course, how silly of me to ask!
+		#Romance, someday I will land a spouse and make a family.
+		  *set leadership +10
+		  Of course, how silly of me to ask!
+		#Horror, nothing beats a worst case scenario like a good horror novel.
+		  *set leadership +10
+		  Of course, how silly of me to ask!
+		#Life hacks and motivational trends. Better to be at my best!
+		  *set leadership +10
+		  Of course, how silly of me to ask!
+        *finish
+  #I am the medical student, and this is a teaching hospital.
+    The kingdom descends into chaos, but you manage to escape with your own hide.
+    Perhaps in time you can return to restore order to this fair land.
+    *finish
+  #I am the attending surgeon, leading this team.
